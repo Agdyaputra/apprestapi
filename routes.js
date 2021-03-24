@@ -1,5 +1,7 @@
 'use strich';
 
+const { json } = require('body-parser');
+
 module.exports = function(app){
     var jsonku = require('./controller');
 
@@ -9,4 +11,5 @@ module.exports = function(app){
     app.route('/tambah').post(jsonku.tambahmahasiswa);
     app.route('/ubah').put(jsonku.ubahdatamahasiswa);
     app.route('/hapus').delete(jsonku.hapusdatamahasiswa);
+    app.route('/tampilmatakuliah').get(jsonku.tampilgrupmatakuliah);
 }
