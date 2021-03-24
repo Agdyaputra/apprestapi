@@ -17,19 +17,20 @@ exports.registrasi = function (req, res) {
     }
 
     // Cek apakah user sudah pernah mendaftar
-    var Query = "SELECT email FROM ?? WHERE ??";
+    var query = "SELECT email FROM ?? WHERE ??";
     var table = ["user", "email", post.email];
 
-    Query = mysql.format(query.table);
-    connection.query(query, function (error, rows,) {
+    query = mysql.format(query,table);
+
+    connection.query(query, function (error, rows) {
         if (error) {
             console.log(error);
         } else {
             if (rows.length == 0) {
-                var Query = "INSER INTO ?? SET ?";
+                var query = "INSERT INTO ?? SET ?";
                 var table = ["user"];
-                Query = mysql.format(query, table);
-                connection.Query(query, post, function (error, rows) {
+                query = mysql.format(query, table);
+                connection.query(query, post, function (error, rows) {
                     if (error) {
                         console.log(error);
                     } else {
