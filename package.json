@@ -23,11 +23,14 @@
   "homepage": "https://github.com/Agdyaputra/apprestapi#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
     "md5": "^2.3.0",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "querystring": "^0.2.1"
   }
 }

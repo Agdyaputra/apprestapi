@@ -89,3 +89,14 @@ exports.tampilgrupmatakuliah = function (req, res) {
             }
         });
 }
+
+// Menampilkan list matakuliah
+// exports.tampilsemuadatamatakuliah = function (req, res) {
+//     connection.query('SELECT * FROM matakuliah', function (error, rows, fields) {
+//         if (error) {
+//             connection.log(error);
+//         } else {
+//             response.ok(rows, res);
+//         }
+//     });
+// }
